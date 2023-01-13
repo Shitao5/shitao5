@@ -6,7 +6,7 @@
 
 <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=shitao5&show_icons=true&count_private=true&hide_border=true" align="left" />
 
-</td><td valign="top" width="40%">
+</td><td valign="middle" width="40%">
 
 <div align="center">  
 <a href="https://www.r-project.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/r.svg" alt="R" height="50" /></a>  

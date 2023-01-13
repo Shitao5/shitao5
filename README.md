@@ -4,7 +4,7 @@
 
 <table><tr><td valign="top" width="60%">
 
-<img src="https://github-readme-stats.vercel.app/api?username=shitao5&show_icons=true&count_private=true&hide_border=true" align="left" />
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=shitao5&show_icons=true&count_private=true&hide_border=true" align="left" />
 
 </td><td valign="top" width="40%">
 

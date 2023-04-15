@@ -2,6 +2,8 @@
 
 <br/>  
 
+![](https://komarev.com/ghpvc/?username=shitao5)
+
 <table><tr><td valign="top" width="60%">
 
 <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=shitao5&show_icons=true&count_private=true&hide_border=true" align="left" />

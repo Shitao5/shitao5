@@ -59,6 +59,8 @@ def fetch_stats(token):
         repos = user["repositories"]
         stars += sum(repo["stargazerCount"] for repo in repos["nodes"])
         stats = {
+            # Match the total shown to visitors, including private counts the
+            # user has chosen to share without exposing private repositories.
             "contributions": (
                 user["contributionsCollection"]["contributionCalendar"]["totalContributions"]
                 + user["contributionsCollection"]["restrictedContributionsCount"]
@@ -76,7 +78,7 @@ def fetch_stats(token):
 
 def render_svg(stats, updated):
     metrics = [
-        ("Contributions", "past year", stats["contributions"], 26, 96),
+        ("Visible contributions", "past year", stats["contributions"], 26, 96),
         ("Public repos", "owned", stats["repositories"], 260, 96),
         ("Stars earned", "public repos", stats["stars"], 26, 152),
         ("Followers", "current", stats["followers"], 260, 152),

@@ -17,6 +17,7 @@ query ProfileStats($login: String!, $after: String) {
   user(login: $login) {
     contributionsCollection {
       contributionCalendar { totalContributions }
+      restrictedContributionsCount
     }
     followers { totalCount }
     repositories(first: 100, after: $after, privacy: PUBLIC, ownerAffiliations: OWNER) {
@@ -58,7 +59,10 @@ def fetch_stats(token):
         repos = user["repositories"]
         stars += sum(repo["stargazerCount"] for repo in repos["nodes"])
         stats = {
-            "contributions": user["contributionsCollection"]["contributionCalendar"]["totalContributions"],
+            "contributions": (
+                user["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+                + user["contributionsCollection"]["restrictedContributionsCount"]
+            ),
             "repositories": repos["totalCount"],
             "stars": stars,
             "followers": user["followers"]["totalCount"],

@@ -4,7 +4,6 @@
 import argparse
 import json
 import os
-from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
@@ -76,7 +75,7 @@ def fetch_stats(token):
             raise RuntimeError("GitHub pagination omitted the next cursor")
 
 
-def render_svg(stats, updated):
+def render_svg(stats):
     metrics = [
         ("Visible contributions", "past year", stats["contributions"], 26, 96),
         ("Public repos", "owned", stats["repositories"], 260, 96),
@@ -89,7 +88,7 @@ def render_svg(stats, updated):
         '<desc id="desc">Automatically refreshed public GitHub profile statistics.</desc>',
         '<rect x="0.5" y="0.5" width="494" height="197" rx="10" fill="#ffffff" stroke="#d0d7de"/>',
         '<text x="25" y="34" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="19" font-weight="700" fill="#24292f">Shitao5 GitHub Stats</text>',
-        '<text x="25" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#57606a">Updated ' + escape(updated) + ' · public data</text>',
+        '<text x="25" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#57606a">Publicly visible data · refreshed daily</text>',
         '<line x1="25" y1="70" x2="470" y2="70" stroke="#d8dee4"/>',
     ]
     for label, note, number, x, y in metrics:
@@ -115,10 +114,9 @@ def main():
         if not token:
             raise RuntimeError("GITHUB_TOKEN is required when no fixture is supplied")
         stats = fetch_stats(token)
-    updated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(render_svg(stats, updated), encoding="utf-8")
+    output.write_text(render_svg(stats), encoding="utf-8")
     print(f"Wrote {output}: {stats}")
 
 

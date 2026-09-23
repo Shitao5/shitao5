@@ -6,7 +6,7 @@
 
 <table><tr><td valign="top" width="60%">
 
-<img src="./assets/github-stats.svg" alt="Shitao5 GitHub statistics" align="left" />
+<img src="https://raw.githubusercontent.com/Shitao5/shitao5/main/assets/github-stats.svg?v=691fa2455c42" alt="Shitao5 GitHub statistics" align="left" />
 
 </td><td valign="middle" width="40%">
 

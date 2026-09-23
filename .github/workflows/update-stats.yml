@@ -23,7 +23,7 @@ jobs:
         run: python3 scripts/update_stats.py
       - name: Commit updated card
         run: |
-          git add assets/github-stats.svg
+          git add README.md assets/github-stats.svg
           if git diff --cached --quiet; then exit 0; fi
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh profile stats card'
           git push

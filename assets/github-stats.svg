@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="198" viewBox="0 0 495 198" role="img" aria-labelledby="title desc">
+<title id="title">Shitao5 GitHub statistics</title>
+<desc id="desc">Automatically refreshed public GitHub profile statistics.</desc>
+<rect x="0.5" y="0.5" width="494" height="197" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<text x="25" y="34" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="19" font-weight="700" fill="#24292f">Shitao5 GitHub Stats</text>
+<text x="25" y="57" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#57606a">Updated 2026-09-23 · public data</text>
+<line x1="25" y1="70" x2="470" y2="70" stroke="#d8dee4"/>
+<circle cx="33" cy="89" r="6" fill="#2da44e"/>
+<text x="49" y="96" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13" fill="#57606a">Contributions</text>
+<text x="49" y="124" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="24" font-weight="700" fill="#24292f">246</text>
+<text x="114" y="123" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#6e7781">past year</text>
+<circle cx="267" cy="89" r="6" fill="#2da44e"/>
+<text x="283" y="96" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13" fill="#57606a">Public repos</text>
+<text x="283" y="124" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="24" font-weight="700" fill="#24292f">60</text>
+<text x="348" y="123" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#6e7781">owned</text>
+<circle cx="33" cy="145" r="6" fill="#2da44e"/>
+<text x="49" y="152" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13" fill="#57606a">Stars earned</text>
+<text x="49" y="180" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="24" font-weight="700" fill="#24292f">18</text>
+<text x="114" y="179" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#6e7781">public repos</text>
+<circle cx="267" cy="145" r="6" fill="#2da44e"/>
+<text x="283" y="152" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13" fill="#57606a">Followers</text>
+<text x="283" y="180" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="24" font-weight="700" fill="#24292f">37</text>
+<text x="348" y="179" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" fill="#6e7781">current</text>
+</svg>

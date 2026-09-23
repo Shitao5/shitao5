@@ -6,7 +6,7 @@
 
 <table><tr><td valign="top" width="60%">
 
-<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=shitao5&show_icons=true&count_private=true&hide_border=true" align="left" />
+<img src="./assets/github-stats.svg" alt="Shitao5 GitHub statistics" align="left" />
 
 </td><td valign="middle" width="40%">
 

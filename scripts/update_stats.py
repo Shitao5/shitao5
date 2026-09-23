@@ -2,8 +2,10 @@
 """Build a self-hosted GitHub profile stats card with the workflow's token."""
 
 import argparse
+import hashlib
 import json
 import os
+import re
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
@@ -102,6 +104,25 @@ def render_svg(stats):
     return "\n".join(pieces) + "\n"
 
 
+def update_readme(image_hash):
+    readme = Path("README.md")
+    source = readme.read_text(encoding="utf-8")
+    new_url = (
+        "https://raw.githubusercontent.com/Shitao5/shitao5/main/"
+        f"assets/github-stats.svg?v={image_hash}"
+    )
+    updated, count = re.subn(
+        r'(?<=src=")(?:(?:\./assets/github-stats\.svg)|'
+        r'(?:https://raw\.githubusercontent\.com/Shitao5/shitao5/main/assets/github-stats\.svg))'
+        r'(?:\?v=[0-9a-f]+)?(?=")',
+        new_url,
+        source,
+    )
+    if count != 1:
+        raise RuntimeError(f"Expected exactly one profile image in README, found {count}")
+    readme.write_text(updated, encoding="utf-8")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--fixture", help="JSON file for offline rendering checks")
@@ -116,7 +137,10 @@ def main():
         stats = fetch_stats(token)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(render_svg(stats), encoding="utf-8")
+    image = render_svg(stats)
+    output.write_text(image, encoding="utf-8")
+    if not args.fixture:
+        update_readme(hashlib.sha256(image.encode("utf-8")).hexdigest()[:12])
     print(f"Wrote {output}: {stats}")
 
 
